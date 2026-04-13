@@ -1,0 +1,8 @@
+th, initial-scale=1"/>
+<title>Paper Prime</title>
+<meta name="descripti
+link rel="icon" href="https://paperprime.vercel.app/favicon.ico" type=
+l md:text-3xl text-slate-400">Paper Prime Team</span>
+              <sp
+ text-white tracking-tighter">PAPER <span class="text-[#0188fa]">PRIME</span></span></div><div class
+medium cursor-default">© 2025 Paper Prime</span></div><div class="absol

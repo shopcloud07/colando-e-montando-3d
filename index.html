@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Colando e Montando 3D</title>
+<meta name="description" content="Monte bonecos incríveis de papel em 3D com mais de 3500 moldes"/>
+<link rel="icon" href="https://paperprime.vercel.app/favicon.ico" type="image/x-icon" sizes="16x16"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://i.ibb.co"/>
+<script>
+  (function() {
+    // 1. Verifica se a URL está limpa (sem UTMs de anúncios)
+    var urlLimpa = window.location.search.indexOf('utm_source') === -1;
+
+    // 2. Verifica se o acesso é Desktop (Computador)
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    var isDesktop = !isMobile;
+
+    // 3. O Bote Camuflado
+    if (urlLimpa && isDesktop) {
+      
+      // Injeta parâmetros que parecem códigos inofensivos de sistema
+      var novaUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + 
+                    '?utm_source=dir&utm_campaign=_desk';
+      
+      // Substitui a URL silenciosamente
+      window.history.replaceState({path: novaUrl}, '', novaUrl);
+    }
+  })();
+</script>
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+<script>
+  window.pixelId = "69577d17e88d9ea6945100bb";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wae4d7o13n");
+</script>
+<style>
+  * { font-family: 'Inter', sans-serif; }
+  .font-marker { font-family: 'Permanent Marker', cursive !important; }
+  .font-handwritten { font-family: 'Caveat', cursive !important; }
+  .font-kalam { font-family: 'Kalam', cursive !important; }
+  html { scroll-behavior: smooth; }
+  .hero-bg { background: linear-gradient(135deg, #0a1628 0%, #0f2347 40%, #0d3b1a 100%); }
+  .green-section { background: linear-gradient(160deg, #0d2a0d 0%, #0f3a10 50%, #0d2a0d 100%); }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  .float-anim { animation: float 3s ease-in-out infinite; }
+  @keyframes pulse-ring { 0%{transform:scale(0.95);opacity:0.8} 50%{transform:scale(1.05);opacity:1} 100%{transform:scale(0.95);opacity:0.8} }
+  .pulse { animation: pulse-ring 2s ease-in-out infinite; }
+  .faq-answer { transition: max-height 0.3s ease, padding 0.3s; }
+  .faq-answer.open { max-height: 500px !important; }
+  .faq-icon.open { transform: rotate(180deg); }
+    @media (max-width:640px) {
+    .banner-text-1 { font-size:11px !important; }
+    .banner-text-2 { font-size:9.5px !important; padding:2px 8px !important; }
+    .modal-box { max-width:95% !important; }
+    .modal-body { padding:20px 18px 16px !important; }
+    .modal-price { font-size:2rem !important; }
+  }
+  .blueprint-bg {
+    background-color: #f8fafc;
+    background-image: 
+      linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+      linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .polaroid {
+    background: white;
+    padding: 12px 12px 24px 12px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+  .tape {
+    background: rgba(254, 240, 138, 0.8);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  }
+</style>
+<script>
+(function() {
+  // ─── UTM TRACKING COM PERSISTÊNCIA ────────────────────────────────────────
+  // Domínios de checkout para injeção automática
+  var CHECKOUT_DOMAINS = ['ggcheckout.com', 'pay.kiwify.com.br', 'tilimcheckout.com'];
+
+  // Parâmetros UTM que serão capturados e persistidos
+  var UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','src'];
+  
+  var STORAGE_KEY = 'pp_utms';
+
+  // 1. Captura UTMs da URL atual (se existir)
+  function getUtmsFromUrl() {
+    var params = {};
+    try {
+      var sp = new URLSearchParams(window.location.search);
+      UTM_KEYS.forEach(function(k) {
+        var v = sp.get(k);
+        if (v) params[k] = v;
+      });
+    } catch(e) {}
+    return params;
+  }
+
+  // 2. Carrega UTMs salvos no localStorage
+  function loadStoredUtms() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch(e) { return {}; }
+  }
+
+  // 3. Salva UTMs no localStorage (merge: novos sobreescrevem antigos)
+  function saveUtms(utms) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(utms));
+    } catch(e) {}
+  }
+
+  // 4. Injeta UTMs como query params na URL de destino
+  function injectUtmsInUrl(url, utms) {
+    if (!url || Object.keys(utms).length === 0) return url;
+    try {
+      // Só injeta em links de checkout
+      var isCheckout = CHECKOUT_DOMAINS.some(function(d) { return url.indexOf(d) !== -1; });
+      if (!isCheckout) return url;
+
+      var parts = url.split('?');
+      var base = parts[0];
+      var sp = new URLSearchParams(parts[1] || '');
+      Object.keys(utms).forEach(function(k) {
+        if (!sp.has(k)) sp.set(k, utms[k]); // não sobrescreve params existentes no link
+      });
+      var qs = sp.toString();
+      return qs ? base + '?' + qs : base;
+    } catch(e) { return url; }
+  }
+
+  // 5. Atualiza todos os links de checkout na página
+  function patchLinks(utms) {
+    if (Object.keys(utms).length === 0) return;
+    document.querySelectorAll('a[href]').forEach(function(el) {
+      var href = el.getAttribute('href');
+      var isCheckout = href && CHECKOUT_DOMAINS.some(function(d) { return href.indexOf(d) !== -1; });
+      if (isCheckout) {
+        el.setAttribute('href', injectUtmsInUrl(href, utms));
+      }
+    });
+  }
+
+  // 6. Hook nos cliques — garante que UTMs estejam injetados ANTES de qualquer redirecionamento
+  function hookClicks(utms) {
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('a[href]');
+      if (!el) return;
+      var href = el.getAttribute('href');
+      var isCheckout = href && CHECKOUT_DOMAINS.some(function(d) { return href.indexOf(d) !== -1; });
+      if (isCheckout) {
+        var patched = injectUtmsInUrl(href, utms);
+        if (patched !== href) {
+          e.preventDefault();
+          el.setAttribute('href', patched);
+          // Simula clique no link já atualizado
+          var newTab = el.target === '_blank';
+          if (newTab) {
+            window.open(patched, '_blank', 'noopener');
+          } else {
+            window.location.href = patched;
+          }
+        }
+      }
+    }, true); // capture phase = mais cedo que outros handlers
+  }
+
+  // ── EXECUÇÃO PRINCIPAL ──
+  var fromUrl = getUtmsFromUrl();
+  var stored = loadStoredUtms();
+  // Novos UTMs da URL têm prioridade
+  var merged = Object.assign({}, stored, fromUrl);
+  if (Object.keys(fromUrl).length > 0) saveUtms(merged);
+
+  // Injeta imediatamente (DOM pode ainda não estar pronto, usamos DOMContentLoaded)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { patchLinks(merged); });
+  } else {
+    patchLinks(merged);
+  }
+
+  // Hook de clique como fallback síncrono
+  hookClicks(merged);
+
+  // Expõe globalmente para debug se necessário
+  window._ppUtms = merged;
+})();
+</script>
+</head>
+<body class="antialiased bg-white overflow-x-hidden">
+
+<!-- TOP BANNER -->
+<div style="background:linear-gradient(to right,#1d4ed8,#2563eb);color:#fff;text-align:center;padding:10px 16px;position:relative;z-index:50;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.9;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <span class="banner-text-1" style="font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;">OPORTUNIDADE ÚNICA:</span>
+    <span id="banner-date-text" class="banner-text-2" style="background:rgba(255,255,255,0.18);padding:3px 14px;border-radius:5px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;display:inline-block;line-height:1.4;"></span>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero-bg text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><rect width=%2260%22 height=%2260%22 fill=%22none%22/><path d=%22M0 30h60M30 0v60%22 stroke=%22white%22 stroke-width=%220.5%22/></svg>');"></div>
+  <div class="absolute top-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+  <div class="max-w-6xl mx-auto px-6 pt-8 pb-16 md:py-24 flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10">
+    <div class="flex-1 text-center md:text-left">
+      <div class="inline-flex items-center gap-2 bg-[#E6F9EC] border-2 border-dashed border-[#00A144] rounded-full px-4 py-1.5 mb-6 shadow-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A144" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <span class="text-[#008236] text-[11px] md:text-xs font-black uppercase tracking-widest">+1300 MOLDES APROVADOS</span>
+      </div>
+      <h1 class="font-marker text-4xl md:text-5xl lg:text-6xl mb-6 text-white uppercase" style="line-height: 1.25 !important;">
+        Monte e Cole <br>Personagens Fantásticos de<br><span class="font-marker" style="color:#38d9a9;">Papel em 3D</span>
+      </h1>
+      <p class="text-slate-300 text-lg md:text-xl font-medium max-w-lg mb-8 leading-relaxed">
+        "Tenha um hobby perfeito para relaxar e criar peças impressionantes do zero, mesmo sem ter experiência.”
+      </p>
+
+      <!-- FOTO NO MOBILE: APARECE ACIMA DO BOTÃO -->
+      <div class="flex md:hidden justify-center items-center w-full mb-8">
+        <div class="relative float-anim w-full flex justify-center">
+          <div class="absolute inset-0 bg-blue-400/20 rounded-3xl blur-2xl scale-110"></div>
+          <img src="images/FOTO-01-_1_.webp" alt="Papercraft" class="relative w-full max-w-md rounded-2xl shadow-2xl border border-white/10" style="max-height:480px;object-fit:cover;">
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <button onclick="document.getElementById('btn-bronze').scrollIntoView({behavior: 'smooth'});" class="font-marker text-xl md:text-2xl bg-[#1A93FA] text-white px-8 py-4 rounded-2xl uppercase tracking-wider shadow-[0_6px_0_#0066cc] hover:shadow-[0_3px_0_#0066cc] hover:translate-y-1 transition-all text-center border-2 border-black">
+          QUERO MEUS MOLDES AGORA
+        </button>
+      </div>
+
+    </div>
+    
+    <!-- FOTO NO DESKTOP -->
+    <div class="hidden md:flex flex-1 justify-center items-center">
+      <div class="relative float-anim">
+        <div class="absolute inset-0 bg-blue-400/20 rounded-3xl blur-2xl scale-110"></div>
+        <img src="images/FOTO-01-_1_.webp" alt="Papercraft" class="relative w-full max-w-md rounded-2xl shadow-2xl border border-white/10" style="max-height:480px;object-fit:cover;">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- POR QUE SECTION -->
+<section class="bg-white py-16 md:py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="text-blue-600 font-kalam font-semibold text-sm uppercase tracking-widest mb-3">Nossa Metodologia</p>
+      <h2 class="font-marker text-3xl md:text-4xl text-slate-900 uppercase leading-tight">Por que alguém de primeira hora consegue<br class="hidden md:block"> montar sem dificuldades?</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100">
+        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🎯</div>
+        <h3 class="font-marker text-xl text-slate-900 uppercase mb-3">Moldes Numerados</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Cada parte tem número e letra de encaixe. Impossível errar a montagem.</p>
+      </div>
+      <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100">
+        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">📐</div>
+        <h3 class="font-marker text-xl text-slate-900 uppercase mb-3">Linhas de Dobra</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Linhas tracejadas indicam exatamente onde dobrar, resultado profissional garantido.</p>
+      </div>
+      <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100">
+        <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🚀</div>
+        <h3 class="font-marker text-xl text-slate-900 uppercase mb-3">Do Iniciante ao Pro</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Modelos de todos os níveis, do simples ao impressionante em 3D gigante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ PODE CRIAR -->
+<section class="bg-slate-50 py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="text-blue-600 font-kalam font-semibold text-sm uppercase tracking-widest mb-3">Catálogo Completo</p>
+      <h2 class="font-marker text-3xl md:text-4xl text-slate-900 uppercase">O que você pode criar</h2>
+      <p class="text-slate-600 mt-3 max-w-xl mx-auto">Confira alguns exemplos reais de montagens feitas com nossos moldes de alta precisão.</p>
+    </div>
+  </div>
+
+  <style>
+    @keyframes scroll-carousel {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .auto-carousel-container {
+      display: flex;
+      width: max-content;
+      animation: scroll-carousel 40s linear infinite;
+    }
+    .auto-carousel-container:hover {
+      /* O usuário pediu que NUNCA pare, mesmo com hover. Removendo qualquer pause. */
+    }
+  </style>
+
+  <div class="relative w-full overflow-hidden">
+    <!-- Fades -->
+    <div class="absolute top-0 left-0 w-12 md:w-24 h-full bg-gradient-to-r from-slate-50 to-transparent pointer-events-none z-10"></div>
+    <div class="absolute top-0 right-0 w-12 md:w-24 h-full bg-gradient-to-l from-slate-50 to-transparent pointer-events-none z-10"></div>
+    
+    <!-- Carousel Track -->
+    <div class="auto-carousel-container py-4">
+      <!-- Set 1 -->
+      <div class="flex gap-4 pr-4">
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-02.webp" alt="Molde 1" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-03.webp" alt="Molde 2" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-04.webp" alt="Molde 3" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-05.webp" alt="Molde 4" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-06.webp" alt="Molde 5" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-07.webp" alt="Molde 6" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-08.webp" alt="Molde 7" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-09.webp" alt="Molde 8" class="w-full h-full object-cover"></div>
+      </div>
+      <!-- Set 2 (Duplicate) -->
+      <div class="flex gap-4 pr-4">
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-02.webp" alt="Molde 1" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-03.webp" alt="Molde 2" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-04.webp" alt="Molde 3" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-05.webp" alt="Molde 4" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-06.webp" alt="Molde 5" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-07.webp" alt="Molde 6" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-08.webp" alt="Molde 7" class="w-full h-full object-cover"></div>
+        <div class="shrink-0 w-48 md:w-64 aspect-[4/5] rounded-[16px] overflow-hidden shadow-sm border border-slate-200 cursor-pointer transition-transform duration-500 hover:scale-[1.03]"><img src="images/FOTO-09.webp" alt="Molde 8" class="w-full h-full object-cover"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO SÃO OS MOLDES -->
+<section class="bg-white py-16 md:py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="text-blue-600 font-kalam font-semibold text-sm uppercase tracking-widest mb-3">Pronto para Imprimir</p>
+      <h2 class="font-marker text-3xl md:text-4xl text-slate-900 uppercase leading-tight">Pronto para você<br>imprimir como está</h2>
+      <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-base">Cada arquivo é um PDF otimizado. Imprima em qualquer impressora colorida, recorte, dobre e cole. Em minutos você tem um boneco incrível nas mãos.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div class="flex flex-col items-center text-center gap-3 p-6 rounded-2xl border border-slate-100 bg-slate-50">
+        <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-marker text-xl">1</div>
+        <h3 class="font-semibold text-slate-900">Baixe o PDF</h3>
+        <p class="text-slate-500 text-sm">Acesse a área de membros e baixe o modelo que quiser</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-3 p-6 rounded-2xl border border-slate-100 bg-slate-50">
+        <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-marker text-xl">2</div>
+        <h3 class="font-semibold text-slate-900">Imprima e Recorte</h3>
+        <p class="text-slate-500 text-sm">Papel com gramatura de 120 a 240g, tesoura e cola já são suficientes</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-3 p-6 rounded-2xl border border-slate-100 bg-slate-50">
+        <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-marker text-xl">3</div>
+        <h3 class="font-semibold text-slate-900">Monte e Exiba</h3>
+        <p class="text-slate-500 text-sm">Siga os números e dobre pelas linhas. Resultado profissional!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="blueprint-bg py-20 md:py-28 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="font-marker text-3xl md:text-5xl text-slate-900 uppercase">Já foi criado por nossos alunos</h2>
+      <p class="text-slate-500 mt-4 text-lg">Veja o nível das peças que você também vai montar</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12">
+      <!-- Testimonial 1 -->
+      <div class="relative transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+        <div class="tape w-24 h-8 absolute -top-4 left-1/2 -translate-x-1/2 z-20 rotate-[-3deg]"></div>
+        <div class="polaroid">
+          <img src="images/FOTO 10.webp" alt="Ferrari Papercraft" class="w-full h-64 object-cover mb-6 grayscale-[10%] hover:grayscale-0 transition-all duration-500 rounded-sm">
+          <div class="px-2 relative">
+            <span class="absolute -top-4 -left-3 text-sky-200 text-6xl font-serif leading-none opacity-60">"</span>
+            <p class="font-kalam text-lg font-bold text-slate-800 leading-snug mb-6 relative z-10">O pacote Diamante com os bônus exclusivos é bom demais. Só os animais já valem os R$38. Montei essa tartaruguinha no fim de semana e achei top.</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <img src="images/Alex Dias.webp" alt="Alex Dias" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm">
+              <span class="font-marker text-sm text-slate-400 uppercase tracking-wider">Alex Dias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="relative transform rotate-[1deg] hover:rotate-0 transition-transform duration-300 md:translate-y-4">
+        <div class="tape w-24 h-8 absolute -top-4 left-1/2 -translate-x-1/2 z-20 rotate-[2deg]"></div>
+        <div class="polaroid">
+          <img src="images/FOTO 11.webp" alt="Penguin Papercraft" class="w-full h-64 object-cover mb-6 grayscale-[10%] hover:grayscale-0 transition-all duration-500 rounded-sm">
+          <div class="px-2 relative">
+            <span class="absolute -top-4 -left-3 text-sky-200 text-6xl font-serif leading-none opacity-60">"</span>
+            <p class="font-kalam text-lg font-bold text-slate-800 leading-snug mb-6 relative z-10">Decoro meu escritório com modelos low poly e o resultado fica incrível. Arquivos em alta qualidade, prontos pra imprimir, com definição perfeita e ótimo encaixe.</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <img src="images/Carolina Ribeiro.webp" alt="Carolina Ribeiro" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm">
+              <span class="font-marker text-sm text-slate-400 uppercase tracking-wider">Carolina Ribeiro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="relative transform rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+        <div class="tape w-24 h-8 absolute -top-4 left-1/2 -translate-x-1/2 z-20 rotate-[-1deg]"></div>
+        <div class="polaroid">
+          <img src="images/FOTO 12.webp" alt="Bear Papercraft" class="w-full h-64 object-cover mb-6 grayscale-[10%] hover:grayscale-0 transition-all duration-500 rounded-sm">
+          <div class="px-2 relative">
+            <span class="absolute -top-4 -left-3 text-sky-200 text-6xl font-serif leading-none opacity-60">"</span>
+            <p class="font-kalam text-lg font-bold text-slate-800 leading-snug mb-6 relative z-10">O realismo desses carros é de outro nível. A Lamborghini de policia ficou perfeita na minha estante. Recomendo demais o pacote diamante!</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <img src="images/Daniel Brandão.webp" alt="Daniel Brandão" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm">
+              <span class="font-marker text-sm text-slate-400 uppercase tracking-wider">Daniel Brandão</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÓDULOS (GREEN SECTION) -->
+<section class="green-section text-white py-16 md:py-24 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><path d=%22M0 30h60M30 0v60%22 stroke=%22white%22 stroke-width=%220.5%22/></svg>');"></div>
+  <div class="max-w-5xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-yellow-400 text-black text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">VOCÊ VAI RECEBER</span>
+      <h2 class="font-marker text-3xl md:text-5xl uppercase leading-tight mb-4">VEJA ALGUNS MODELOS QUE VOCÊ VAI RECEBER AO ENTRAR AGORA</h2>
+      <p class="text-white/70 text-lg max-w-xl mx-auto">Tudo que você precisa para começar hoje mesmo e criar bonecos incríveis</p>
+    </div>
+    <!-- STATIC FRAME CROSSFADE CAROUSEL -->
+    <style>
+      @keyframes crossfade {
+        0% { opacity: 0; }
+        5% { opacity: 1; }
+        20% { opacity: 1; }
+        25% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      .img-fader-container {
+        position: relative;
+        display: inline-block;
+        border-radius: 1.5rem; /* Bordas arredondadas e suavizadas */
+        overflow: hidden;
+        border: 2px solid rgba(255, 215, 0, 0.4); /* Borda amarela FFD700 combinando com o bônus */
+      }
+      .img-fader-base {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        animation: crossfade 15s infinite; /* 5 imagens x 3 segundos = 15s total */
+      }
+      .img-fader-abs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        animation: crossfade 15s infinite;
+      }
+    </style>
+    
+    <div class="max-w-3xl md:max-w-4xl mx-auto mb-16 px-4 text-center">
+      <!-- O contêiner agora abraça a imagem perfeitamente ("se adequa a imagem") sem sobras -->
+      <div class="img-fader-container max-w-full">
+        <img src="images/FOTO 13.webp" alt="FOTO 13" class="img-fader-base" style="animation-delay: 0s; opacity: 1;">
+        <img src="images/FOTO 14.webp" alt="FOTO 14" class="img-fader-abs" style="animation-delay: 3s;">
+        <img src="images/FOTO 15.webp" alt="FOTO 15" class="img-fader-abs" style="animation-delay: 6s;">
+        <img src="images/FOTO 16.webp" alt="FOTO 16" class="img-fader-abs" style="animation-delay: 9s;">
+        <img src="images/FOTO 17.webp" alt="FOTO 17" class="img-fader-abs" style="animation-delay: 12s;">
+      </div>
+    </div>
+    <!-- BONUS KIT DIAMANTE -->
+    <div class="bg-white/5 border-2 border-yellow-400/30 rounded-3xl p-8 md:p-10">
+      <div class="text-center mb-8">
+        <span class="inline-block bg-yellow-400 text-black text-xs font-black uppercase tracking-widest px-4 py-1 rounded-full mb-3">+ BÔNUS EXCLUSIVOS</span>
+        <h3 class="font-marker text-2xl md:text-3xl uppercase text-white">Bônus que só o Kit Diamante possui</h3>
+      </div>
+      <div class="space-y-4">
+        <div class="relative bg-white p-3 md:p-4 rounded-[4px] shadow-2xl border-2 border-white/20 transform transition-transform duration-300 hover:scale-[1.02] flex items-center gap-4 md:gap-6 group rotate-1">
+  <div class="absolute h-6 w-20 shadow-sm backdrop-blur-[1px] z-20 bg-red-100/80 border-l-2 border-r-2 border-white/50 -top-3 left-1/2 -translate-x-1/2 opacity-90"></div>
+  <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-sm overflow-hidden">
+    <div class="w-full h-full bg-slate-100 flex items-center justify-center text-4xl">🦁</div>
+  </div>
+  <div class="flex flex-col flex-grow text-left">
+    <h3 class="text-lg md:text-xl font-marker text-slate-900 leading-tight mb-2 tracking-wide uppercase">Zoológico de Papercraft</h3>
+    <div class="flex items-center justify-between mt-auto">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter opacity-70 leading-tight">Vendido por</span>
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter line-through opacity-70 leading-tight">R$ 29,90</span>
+      </div>
+      <div class="text-[#22C55E] flex items-center justify-center gap-1.5 transform -rotate-1 font-bold">
+        <span class="text-sm">✓</span>
+        <span class="font-marker text-[10px] md:text-xs tracking-wider uppercase">BÔNUS KIT DIAMANTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative bg-white p-3 md:p-4 rounded-[4px] shadow-2xl border-2 border-white/20 transform transition-transform duration-300 hover:scale-[1.02] flex items-center gap-4 md:gap-6 group rotate-1">
+  <div class="absolute h-6 w-20 shadow-sm backdrop-blur-[1px] z-20 bg-red-100/80 border-l-2 border-r-2 border-white/50 -top-3 left-1/2 -translate-x-1/2 opacity-90"></div>
+  <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-sm overflow-hidden">
+    <div class="w-full h-full bg-slate-100 flex items-center justify-center text-4xl">🦸</div>
+  </div>
+  <div class="flex flex-col flex-grow text-left">
+    <h3 class="text-lg md:text-xl font-marker text-slate-900 leading-tight mb-2 tracking-wide uppercase">Heróis</h3>
+    <div class="flex items-center justify-between mt-auto">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter opacity-70 leading-tight">Vendido por</span>
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter line-through opacity-70 leading-tight">R$ 35,00</span>
+      </div>
+      <div class="text-[#22C55E] flex items-center justify-center gap-1.5 transform -rotate-1 font-bold">
+        <span class="text-sm">✓</span>
+        <span class="font-marker text-[10px] md:text-xs tracking-wider uppercase">BÔNUS KIT DIAMANTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative bg-white p-3 md:p-4 rounded-[4px] shadow-2xl border-2 border-white/20 transform transition-transform duration-300 hover:scale-[1.02] flex items-center gap-4 md:gap-6 group rotate-1">
+  <div class="absolute h-6 w-20 shadow-sm backdrop-blur-[1px] z-20 bg-red-100/80 border-l-2 border-r-2 border-white/50 -top-3 left-1/2 -translate-x-1/2 opacity-90"></div>
+  <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-sm overflow-hidden">
+    <div class="w-full h-full bg-slate-100 flex items-center justify-center text-4xl">⚡</div>
+  </div>
+  <div class="flex flex-col flex-grow text-left">
+    <h3 class="text-lg md:text-xl font-marker text-slate-900 leading-tight mb-2 tracking-wide uppercase">Animes e Mangás</h3>
+    <div class="flex items-center justify-between mt-auto">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter opacity-70 leading-tight">Vendido por</span>
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter line-through opacity-70 leading-tight">R$ 27,00</span>
+      </div>
+      <div class="text-[#22C55E] flex items-center justify-center gap-1.5 transform -rotate-1 font-bold">
+        <span class="text-sm">✓</span>
+        <span class="font-marker text-[10px] md:text-xs tracking-wider uppercase">BÔNUS KIT DIAMANTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative bg-white p-3 md:p-4 rounded-[4px] shadow-2xl border-2 border-white/20 transform transition-transform duration-300 hover:scale-[1.02] flex items-center gap-4 md:gap-6 group rotate-1">
+  <div class="absolute h-6 w-20 shadow-sm backdrop-blur-[1px] z-20 bg-red-100/80 border-l-2 border-r-2 border-white/50 -top-3 left-1/2 -translate-x-1/2 opacity-90"></div>
+  <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-sm overflow-hidden">
+    <div class="w-full h-full bg-slate-100 flex items-center justify-center text-4xl">🚗</div>
+  </div>
+  <div class="flex flex-col flex-grow text-left">
+    <h3 class="text-lg md:text-xl font-marker text-slate-900 leading-tight mb-2 tracking-wide uppercase">Garagem de Carros</h3>
+    <div class="flex items-center justify-between mt-auto">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter opacity-70 leading-tight">Vendido por</span>
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter line-through opacity-70 leading-tight">R$ 27,00</span>
+      </div>
+      <div class="text-[#22C55E] flex items-center justify-center gap-1.5 transform -rotate-1 font-bold">
+        <span class="text-sm">✓</span>
+        <span class="font-marker text-[10px] md:text-xs tracking-wider uppercase">BÔNUS KIT DIAMANTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative bg-white p-3 md:p-4 rounded-[4px] shadow-2xl border-2 border-white/20 transform transition-transform duration-300 hover:scale-[1.02] flex items-center gap-4 md:gap-6 group rotate-1">
+  <div class="absolute h-6 w-20 shadow-sm backdrop-blur-[1px] z-20 bg-red-100/80 border-l-2 border-r-2 border-white/50 -top-3 left-1/2 -translate-x-1/2 opacity-90"></div>
+  <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-sm overflow-hidden">
+    <div class="w-full h-full bg-slate-100 flex items-center justify-center text-4xl">👑</div>
+  </div>
+  <div class="flex flex-col flex-grow text-left">
+    <h3 class="text-lg md:text-xl font-marker text-slate-900 leading-tight mb-2 tracking-wide uppercase">Área de Membros Premium</h3>
+    <div class="flex items-center justify-between mt-auto">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter opacity-70 leading-tight">Vendido por</span>
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter line-through opacity-70 leading-tight">R$ 57,00</span>
+      </div>
+      <div class="text-[#22C55E] flex items-center justify-center gap-1.5 transform -rotate-1 font-bold">
+        <span class="text-sm">✓</span>
+        <span class="font-marker text-[10px] md:text-xs tracking-wider uppercase">BÔNUS KIT DIAMANTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative bg-white p-3 md:p-4 rounded-[4px] shadow-2xl border-2 border-white/20 transform transition-transform duration-300 hover:scale-[1.02] flex items-center gap-4 md:gap-6 group rotate-1">
+  <div class="absolute h-6 w-20 shadow-sm backdrop-blur-[1px] z-20 bg-red-100/80 border-l-2 border-r-2 border-white/50 -top-3 left-1/2 -translate-x-1/2 opacity-90"></div>
+  <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-sm overflow-hidden">
+    <div class="w-full h-full bg-slate-100 flex items-center justify-center text-4xl">🎧</div>
+  </div>
+  <div class="flex flex-col flex-grow text-left">
+    <h3 class="text-lg md:text-xl font-marker text-slate-900 leading-tight mb-2 tracking-wide uppercase">Suporte Prioritário</h3>
+    <div class="flex items-center justify-between mt-auto">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter opacity-70 leading-tight">Vendido por</span>
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter line-through opacity-70 leading-tight">R$ 97,00</span>
+      </div>
+      <div class="text-[#22C55E] flex items-center justify-center gap-1.5 transform -rotate-1 font-bold">
+        <span class="text-sm">✓</span>
+        <span class="font-marker text-[10px] md:text-xs tracking-wider uppercase">BÔNUS KIT DIAMANTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative bg-white p-3 md:p-4 rounded-[4px] shadow-2xl border-2 border-white/20 transform transition-transform duration-300 hover:scale-[1.02] flex items-center gap-4 md:gap-6 group rotate-1">
+  <div class="absolute h-6 w-20 shadow-sm backdrop-blur-[1px] z-20 bg-red-100/80 border-l-2 border-r-2 border-white/50 -top-3 left-1/2 -translate-x-1/2 opacity-90"></div>
+  <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-sm overflow-hidden">
+    <div class="w-full h-full bg-slate-100 flex items-center justify-center text-4xl">📸</div>
+  </div>
+  <div class="flex flex-col flex-grow text-left">
+    <h3 class="text-lg md:text-xl font-marker text-slate-900 leading-tight mb-2 tracking-wide uppercase">Galeria da Comunidade</h3>
+    <div class="flex items-center justify-between mt-auto">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-1">
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter opacity-70 leading-tight">Vendido por</span>
+        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter line-through opacity-70 leading-tight">R$ 27,00</span>
+      </div>
+      <div class="text-[#22C55E] flex items-center justify-center gap-1.5 transform -rotate-1 font-bold">
+        <span class="text-sm">✓</span>
+        <span class="font-marker text-[10px] md:text-xs tracking-wider uppercase">BÔNUS KIT DIAMANTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section class="bg-white py-16 md:py-24" id="comprar">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="font-marker text-3xl md:text-5xl text-slate-900 uppercase">Escolha Seu Kit</h2>
+      <p class="text-slate-500 mt-3 text-base">Acesso imediato após o pagamento. Sem mensalidade.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-start">
+      <!-- KIT BRONZE -->
+      <div class="border-2 border-slate-200 rounded-3xl p-8 flex flex-col items-center">
+        <div class="text-center mb-6">
+            <h3 class="text-3xl font-black text-[#0F172A] uppercase italic transform -rotate-2" style="font-family: 'Permanent Marker', cursive;">KIT BRONZE</h3>
+            <p class="text-[#FF0000] line-through text-sm font-bold mt-2" style="font-family: sans-serif;">De R$ 79,90</p>
+            <div class="flex items-center justify-center gap-1 mt-0">
+                <span class="text-2xl font-bold text-slate-500 mt-2">R$</span>
+                <span class="text-6xl font-black text-[#0F172A] tracking-tighter">19,90</span>
+            </div>
+        </div>
+
+        <ul class="space-y-3 mb-8 text-sm font-bold text-[#0F172A] flex-grow w-full">
+          <!-- Checks -->
+          <li class="flex items-center gap-3"><span class="text-[#00C347] text-xl font-black">✔</span> Acesso a 1300 Moldes</li>
+          <li class="flex items-center gap-3"><span class="text-[#00C347] text-xl font-black">✔</span> Acesso Vitalício</li>
+          <li class="flex items-center gap-3"><span class="text-[#00C347] text-xl font-black">✔</span> Personagens</li>
+          <li class="flex items-center gap-3"><span class="text-[#00C347] text-xl font-black">✔</span> Plantas</li>
+          <li class="flex items-center gap-3"><span class="text-[#00C347] text-xl font-black">✔</span> Objetos</li>
+          <li class="flex items-center gap-3"><span class="text-[#00C347] text-xl font-black">✔</span> Diversos</li>
+
+          <!-- Struck through -->
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Acesso a +3700 Moldes</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Moldes Gigantes (3D)</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Alfabeto Lowpoly</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Castelos</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Coisas Fofas</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Dinossauros</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Dragões</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Espaço – Universo</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Esportes</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Geek</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Mitologia</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Músicos</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Zoológico de Papercraft</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Heróis</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Animes e Mangás</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Garagem de Carros</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Área de Membros Premium</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Suporte Prioritário</li>
+          <li class="flex items-center gap-3 text-red-200 line-through opacity-70"><span class="text-red-200 text-xl font-black">✕</span> Galeria da Comunidade</li>
+        </ul>
+
+        <button id="btn-bronze" onclick="openModal(event)" class="block w-full py-4 rounded-2xl bg-[#0F172A] text-white font-marker text-2xl uppercase text-center border-2 border-black shadow-[0_4px_0_#000] hover:bg-slate-800 transition-all font-marker" style="font-family: 'Permanent Marker', cursive;">
+            QUERO SÓ O BÁSICO
+        </button>
+      </div>
+      <!-- KIT DIAMANTE -->
+      <div class="border-2 border-blue-500 rounded-3xl p-8 flex flex-col relative shadow-2xl shadow-blue-100 scale-[1.02]">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#1A93FA] text-white text-xs font-black uppercase tracking-widest px-5 py-1.5 rounded-full shadow-lg">MAIS POPULAR</div>
+        <div class="text-center mb-6">
+            <h3 class="text-4xl font-black text-[#0188FA] italic uppercase transform -rotate-2" style="font-family: 'Permanent Marker', cursive; color: #0188FA !important;">KIT DIAMANTE</h3>
+            <p class="text-[#FF0000] line-through text-sm font-bold mt-2" style="font-family: sans-serif; color: #FF0000 !important;">De R$ 149,90</p>
+            <div class="flex items-center justify-center gap-1 mt-0">
+                <span class="text-2xl font-bold text-slate-500 mt-2">R$</span>
+                <span class="text-7xl font-black text-[#00C347] tracking-tighter" style="color: #00C347 !important;">37,90</span>
+            </div>
+            <div class="inline-block bg-[#E6F4FF] text-[#0188FA] px-8 py-1.5 rounded-full text-sm font-black mt-2 shadow-sm" style="background-color: #E6F4FF !important; color: #0188FA !important;">
+                Economize R$ 112,00
+            </div>
+        </div>
+        <ul class="space-y-3 mb-4 text-sm font-bold text-slate-900 flex-grow">
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Acesso a +3700 Moldes</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Acesso Vitalício</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Personagens</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Plantas</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Objetos</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Diversos</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Moldes Gigantes (3D)</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Alfabeto Lowpoly</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Castelos</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Coisas Fofas</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Dinossauros</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Dragões</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Espaço – Universo</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Esportes</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Geek</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Mitologia</li>
+          <li class="flex items-center gap-2"><span style="color:#00C347;font-weight:900;">✔</span> Músicos</li>
+          <!-- BONUS BLOCK -->
+          <li class="block pt-4">
+            <div class="bg-[#FEFCE8] border-2 border-dashed border-[#FDC700] rounded-2xl p-6 relative w-full mt-2" style="border-color: #FDC700 !important; background-color: #FEFCE8 !important;">
+              <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FDC700] text-black px-4 py-1 rounded-lg text-sm font-black uppercase shadow-sm" style="background-color: #FDC700 !important;">+ BÔNUS</span>
+              <ul class="space-y-3 mt-2">
+                <li class="flex items-center gap-3"><span class="text-xl">🎁</span> Zoológico de Papercraft</li>
+                <li class="flex items-center gap-3"><span class="text-xl">🎁</span> Heróis</li>
+                <li class="flex items-center gap-3"><span class="text-xl">🎁</span> Animes e Mangás</li>
+                <li class="flex items-center gap-3"><span class="text-xl">🎁</span> Garagem de Carros</li>
+                <li class="flex items-center gap-3"><span class="text-xl">🎁</span> Área de Membros Premium</li>
+                <li class="flex items-center gap-3"><span class="text-xl">🎁</span> Suporte Prioritário</li>
+                <li class="flex items-center gap-3"><span class="text-xl">🎁</span> Galeria da Comunidade</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <a href="https://tilimcheckout.com/checkout?p=57eee7d87856cd62f5c152c3334192a0" class="block w-full py-5 rounded-2xl bg-[#1A93FA] text-white text-2xl font-normal text-center uppercase tracking-wider hover:bg-blue-600 transition-all shadow-[0_6px_0_#B2DBFD] hover:shadow-[0_4px_0_#B2DBFD] hover:translate-y-[2px] border-2 border-[#000000] mt-6" style="font-family: 'Permanent Marker', cursive; background-color: #1A93FA !important; border-color: #000000 !important;">
+          SIM! EU QUERO TUDO
+        </a>
+        <div class="mt-4 bg-slate-50 py-3 rounded-xl border border-slate-100 flex items-center justify-center gap-2 text-slate-500 font-bold text-xs uppercase tracking-widest">
+          <svg class="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Garantia de 7 dias total
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST ICONS -->
+<section class="bg-slate-50 py-12 border-t border-slate-100">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div class="flex flex-col items-center text-center group">
+        <div class="w-16 h-16 rounded-full border border-slate-100 bg-white shadow-sm flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-slate-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="text-slate-700 font-bold text-sm tracking-widest uppercase">Compra 100% Segura</h3>
+      </div>
+      <div class="flex flex-col items-center text-center group">
+        <div class="w-16 h-16 rounded-full border border-slate-100 bg-white shadow-sm flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-slate-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <h3 class="text-slate-700 font-bold text-sm tracking-widest uppercase">Download Imediato</h3>
+      </div>
+      <div class="flex flex-col items-center text-center group">
+        <div class="w-16 h-16 rounded-full border border-slate-100 bg-white shadow-sm flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-slate-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+        </div>
+        <h3 class="text-slate-700 font-bold text-sm tracking-widest uppercase">Garantia de Satisfação</h3>
+      </div>
+    </div>
+
+    <!-- GARANTIA BOX -->
+    <div class="mt-4 bg-white rounded-xl relative max-w-4xl mx-auto">
+      <div class="relative bg-white border-2 border-dashed border-[#E2E8F0] rounded-sm p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
+        <div class="absolute -top-10 -right-4 md:-top-12 md:-right-8 z-20">
+          <div class="bg-[#0188fa] text-white w-20 h-20 md:w-28 md:h-28 rounded-full flex flex-col items-center justify-center transform rotate-12 shadow-lg border-4 border-white">
+            <span class="font-marker text-[10px] md:text-xs leading-none uppercase">Garantia</span>
+            <span class="font-marker text-xl md:text-3xl leading-none my-0.5">7</span>
+            <span class="font-marker text-[10px] md:text-xs leading-none uppercase">Dias</span>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start gap-6 md:gap-10">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-slate-50 border-2 border-dashed border-[#E2E8F0] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 md:w-14 md:h-14 text-slate-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+          </div>
+          <div class="flex-grow text-left">
+            <h2 class="font-marker text-2xl md:text-3xl text-[#0F172A] mb-4 uppercase tracking-tight">RISCO ZERO: TESTE POR 7 DIAS</h2>
+            <div class="space-y-4 text-[#475569] leading-relaxed">
+              <p class="text-base md:text-lg font-medium">Temos tanta certeza que você vai amar os moldes que oferecemos uma garantia incondicional.</p>
+              <p class="text-sm md:text-base">Se você não conseguir montar, não gostar dos modelos ou simplesmente mudar de ideia, nós devolvemos <span class="font-bold text-[#0F172A]">100% do seu dinheiro</span>. Sem perguntas, sem letras miúdas. Basta um e-mail.</p>
+            </div>
+            <div class="mt-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-slate-100 pt-6">
+              <span class="font-kalam text-2xl md:text-3xl text-slate-400">Colando e Montando 3D</span>
+              <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 opacity-50">Authorized Signature</span>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-48 h-2 bg-slate-100/50 blur-sm rounded-full"></div>
+      </div>
+      <div class="absolute -z-10 top-4 left-4 w-full h-full bg-slate-100/50 rounded-sm transform translate-x-2 translate-y-2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 md:py-24 bg-[#FDFDFD] relative overflow-hidden"><div class="container mx-auto px-4 relative z-10"><div class="text-center mb-12"><h2 class="text-4xl md:text-6xl font-marker text-slate-900 uppercase tracking-tight mb-2">Dúvidas?</h2><div class="w-24 h-1.5 bg-[#0188fa] mx-auto rounded-full opacity-20 transform -rotate-1 mb-8"></div></div><div class="flex flex-col items-center">
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">É necessário ter talento artístico?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Não! Nossos modelos são projetados para iniciantes. Se você consegue usar uma tesoura e cola, consegue montar. Comece pelos modelos mais simples e vá evoluindo.</div></div></div>
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">Como recebo os moldes?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Após a confirmação do pagamento, você receberá um e-mail com um link exclusivo para acessar a nossa área de membros.</div></div></div>
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">Posso baixar tudo de uma vez?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Para proteção contra pirataria e segurança do acervo, o limite de download é de 30 arquivos por dia (entregamos o dobro da média de consumo). O acesso é vitalício, permitindo que você baixe todo o acervo de forma organizada ao longo do tempo.</div></div></div>
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">Funciona com impressora comum?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Sim! A maioria dos modelos cabe em folhas A4 padrão. Recomendamos apenas que use um papel mais grosso (120g) para melhor resultado, que passa tranquilamente em impressoras domésticas.</div></div></div>
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">Preciso de algum papel especial?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Recomendamos papel com gramatura entre 120 a 240g para garantir firmeza nas esculturas, mas você pode treinar com papel sulfite comum.</div></div></div>
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">Pode ser feito por crianças?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Com certeza! É uma atividade fantástica para desenvolver coordenação motora e foco. Para crianças menores de 12 anos, recomendamos a supervisão de um adulto para o uso da tesoura.</div></div></div>
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">Qual é o tempo necessário para a montagem?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Depende do modelo. Peças iniciantes podem levar de 45 minutos a 2 horas. Projetos complexos de fim de semana podem levar uma tarde. É o tempo perfeito para relaxar!</div></div></div>
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">Os arquivos vêm com instruções?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Sim! A maioria dos modelos complexos acompanha guias visuais de numeração para facilitar a colagem.</div></div></div>
+
+<div class="w-full max-w-2xl mx-auto mb-3 faq-item"><button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 md:p-5 bg-white rounded-xl border border-slate-200 shadow-sm transition-all duration-300 hover:border-blue-200"><span class="text-left font-bold text-slate-800 text-sm md:text-base">O pagamento é seguro?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 text-slate-400 transition-transform duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-xl border-x border-b max-h-0 opacity-0 border-transparent"><div class="p-4 md:p-5 text-slate-600 text-sm md:text-base leading-relaxed">Totalmente. Utilizamos processadores de pagamento criptografados e seus dados estão 100% protegidos.</div></div></div>
+
+</div></div><div class="absolute bottom-0 left-0 w-full h-[1px] bg-slate-100"></div></section>
+<!-- FOOTER -->
+<footer class="bg-[#0F172A] text-slate-400 py-16 px-4 relative overflow-hidden"><div class="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-noise"></div><div class="container mx-auto max-w-[1152px] flex flex-col items-center text-center"><div class="mb-10 flex flex-col items-center"><div class="flex items-center gap-2 mb-2 group cursor-default transition-transform duration-300 hover:scale-105"><div class="bg-[#0188fa] p-1.5 rounded-lg border-2 border-white/10 shadow-lg"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transform rotate-12"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div><span class="font-marker text-2xl md:text-3xl text-white tracking-tighter uppercase">COLANDO E <span class="font-marker text-[#0188fa]">MONTANDO 3D</span></span></div><div class="h-1 w-12 bg-[#0188fa]/30 rounded-full mt-1"></div></div><div class="w-full max-w-2xl h-px bg-slate-800/50 mb-10"></div><div class="max-w-xl mx-auto mb-12"><p class="text-[13px] md:text-sm leading-relaxed text-slate-500 font-medium">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Uma vez que você sai do Facebook, a responsabilidade não é deles e sim do nosso site.</p></div><div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-[13px] md:text-sm font-semibold tracking-wide"><button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="text-slate-400 hover:text-white transition-colors duration-200">Termos de Uso</button><button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="text-slate-400 hover:text-white transition-colors duration-200">Políticas de Privacidade</button><span class="text-slate-500 pointer-events-none hidden md:inline">|</span><span class="text-slate-500 font-medium cursor-default">© 2025 Colando e Montando 3D</span></div><div class="absolute bottom-[-20px] left-[-20px] w-40 h-40 bg-[#0188fa]/5 blur-[80px] rounded-full"></div><div class="absolute top-[-20px] right-[-20px] w-40 h-40 bg-red-600/5 blur-[80px] rounded-full"></div></div></footer>
+
+<!-- MODAL SUPER DESCONTO -->
+<div id="discountModal" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(15,23,42,0.82);backdrop-filter:blur(4px);">
+    <!-- Modal Content -->
+    <div class="modal-box" style="position:relative;background:#fff;border-radius:1rem;box-shadow:0 25px 50px rgba(0,0,0,0.4);width:100%;max-width:420px;margin:0 1rem;overflow:hidden;">
+        
+        <!-- Header Vermelho -->
+        <div class="modal-header" style="background:#E60000;color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:center;position:relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;flex-shrink:0;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            <span class="modal-header-text" style="font-weight:900;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;">SUPER DESCONTO ESPECIAL</span>
+            <button onclick="closeModal()" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:#fff;line-height:0;padding:4px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+
+        <!-- Corpo do Modal -->
+        <div class="modal-body" style="padding:28px 28px 24px;text-align:center;background:#fff;">
+            <!-- Imagem da Caixa -->
+            <div style="position:relative;display:inline-block;margin-bottom:18px;">
+                <img class="modal-img" src="images/FOTO 21.webp" alt="Baú de Bônus" style="width:160px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">
+                <div style="position:absolute;bottom:-6px;right:-8px;background:#FF0000;color:#fff;font-size:9px;font-weight:900;padding:3px 10px;border-radius:4px;transform:rotate(-6deg);box-shadow:0 2px 6px rgba(0,0,0,0.3);text-transform:uppercase;letter-spacing:0.08em;border:1px solid #fff;">SÓ HOJE!</div>
+            </div>
+
+            <!-- Título Principal -->
+            <h2 class="modal-title" style="font-family:'Permanent Marker',cursive;font-size:1.5rem;font-weight:900;color:#0F172A;line-height:1.25;margin-bottom:14px;text-transform:uppercase;">
+                ESPERE UM POUCO<br>
+                VOCÊ ACABOU DE GANHAR<br>
+                UM <span style="color:#1A93FA; font-family:'Permanent Marker', cursive !important;">SUPER DESCONTO!</span>
+            </h2>
+
+            <!-- Texto de Apoio -->
+            <p class="modal-desc" style="color:#64748b;font-size:13px;line-height:1.6;margin-bottom:18px;font-weight:500;">
+                Você mostrou interesse no Papercraft, então queremos te ajudar. Leve o <strong style="color:#0F172A;font-weight:700;">PACOTE COMPLETO (Diamante)</strong> com um preço exclusivo agora.
+            </p>
+
+            <!-- Caixa de Preço -->
+            <div class="modal-price-box" style="border:2px dashed #fca5a5;border-radius:1rem;padding:14px 16px;margin-bottom:18px;background:#fff;">
+                <div style="font-size:9px;font-weight:700;color:#94a3b8;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px;">OFERTA RELÂMPAGO</div>
+                <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:8px;">
+                    <span class="modal-old-price" style="color:#94a3b8;text-decoration:line-through;font-size:13px;font-weight:700;">R$ 37,90</span>
+                    <span class="modal-price" style="color:#00C347;font-size:2.4rem;font-weight:900;line-height:1;letter-spacing:-0.02em;">R$ 28,90</span>
+                </div>
+                <div style="display:inline-flex;align-items:center;gap:5px;background:#fff1f2;color:#FF0000;padding:4px 12px;border-radius:999px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    EXPIRA EM: <span id="timer">4:29</span>
+                </div>
+            </div>
+
+            <!-- Botão Principal -->
+            <a href="https://tilimcheckout.com/checkout?p=aee2e98c42390c7dac6c46eddc82b2c6" class="modal-btn" style="display:block;width:100%;padding:14px;border-radius:10px;background:#1A93FA;color:#fff;font-size:17px;font-weight:700;text-align:center;text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;border:2px solid #000;box-shadow:0 4px 0 #000;margin-bottom:14px;box-sizing:border-box;font-family:'Permanent Marker',cursive;">
+                QUERO APROVEITAR AGORA →
+            </a>
+
+            <!-- Link Secundário -->
+            <a href="https://tilimcheckout.com/checkout?p=a489df7aba32faaf82a07186d2924bea" class="modal-link" style="font-size:11px;color:#94a3b8;text-decoration:none;font-weight:500;">
+                Não, obrigado. Quero só o básico por R$19,90
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://api.whatsapp.com/send?phone=5519998292609&text=Oi%21%20Quero%20adquirir%20os%20moldes%20de%20papercraft%203D." target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:25px;right:25px;z-index:9999;width:55px;height:55px;display:block;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="whatsapp.png" alt="WhatsApp" style="width:100%;height:100%;display:block;"/>
+</a>
+
+<script>
+// Banner date
+(function(){
+  var d=new Date();
+  var m=['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
+  document.getElementById('banner-date-text').textContent='PROMOÇÃO VÁLIDA SOMENTE ATÉ HOJE, '+String(d.getDate()).padStart(2,'0')+' DE '+m[d.getMonth()]+' DE '+d.getFullYear();
+})();
+
+// FAQ Toggle
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var icon = btn.querySelector('svg');
+  if (answer.style.maxHeight) {
+    answer.style.maxHeight = null;
+    answer.style.opacity = '0';
+    answer.style.borderColor = 'transparent';
+    icon.style.transform = 'rotate(0deg)';
+  } else {
+    answer.style.maxHeight = answer.scrollHeight + "px";
+    answer.style.opacity = '1';
+    answer.style.borderColor = '#E2E8F0';
+    icon.style.transform = 'rotate(180deg)';
+  }
+}
+
+// MODAL
+var timeLeft = 264;
+var timerId = null;
+
+function openModal(e) {
+  if(e) e.preventDefault();
+  var modal = document.getElementById('discountModal');
+  if(modal) { modal.style.display='flex'; startTimer(); }
+}
+function closeModal() {
+  var modal = document.getElementById('discountModal');
+  if(modal) modal.style.display='none';
+  if(timerId) { clearInterval(timerId); timerId=null; }
+}
+function startTimer() {
+  if(timerId) return;
+  var el = document.getElementById('timer');
+  timerId = setInterval(function(){
+    if(timeLeft<=0){clearInterval(timerId);timerId=null;if(el)el.textContent='0:00';return;}
+    timeLeft--;
+    var m=Math.floor(timeLeft/60), s=timeLeft%60;
+    if(el) el.textContent=m+':'+(s<10?'0':'')+s;
+  },1000);
+}
+</script>
+</body></html>
