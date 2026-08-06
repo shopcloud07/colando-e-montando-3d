@@ -37,7 +37,7 @@ from PIL import Image
 # CONFIGURACAO
 # ----------------------------------------------------------------------------
 
-MODO_SIMULACAO = False  # True = so mostra o relatorio, nao grava nada
+MODO_SIMULACAO = True   # True = so mostra o relatorio, nao grava nada
 
 QUALIDADE = 82          # 0-100. 80-85 = indistinguivel a olho nu.
                         # Abaixo de 75 comeca a aparecer artefato em degrade.
